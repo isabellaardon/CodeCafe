@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestaurantMenu</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+      <!--Styles section-->
+ <style>
+                /* BACKGROUND COLOR N TEXT FOR WHOLE PAGE */
+    body {
+        background-color: #ffe6f2;
+        font-family: 'Press Start 2P', cursive;
+        color: #4d2c2c;
+        text-align: center;
+        line-height: 1.5; 
+        letter-spacing: 1px;
+    }
+                /* GET RID OF BULLET POINTS */
+    header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; 
+    }
+                /* GET RID OF <HR> LINES */
+    hr {
+        display: none; 
+    }
+                /* COLOR LINKS PINK */
+    nav.links a {
+        color: #cc1c48;
+        font-weight: bold; 
+    }
+
+                /* MENU STYLING */
+    #menu-section {
+        background-color: #ffccdd;
+        display: block;
+        margin: 50 px auto;
+        padding: 20px;
+        box-shadow: 8px 8px 0px #ff6699;
+        border: 4px dashed #ff99aa;
+        border-radius: 0;
+        width: 100%;
+    }
+                /* ORDER SECTION STYLING */
+    #order-section {
+        background-color: #ffb3c6;
+        display: block; 
+        padding: 20px; 
+        border: 4px solid #ff6699;
+        box-shadow: 6px 6px 0px #ff99aa;
+        line-height: 2.3;
+    }
+    #menu-section, #order-section {
+        max-width: 90%; 
+        margin: 20px auto; 
+        padding: 20px; 
+        box-sizing: border-box;
+        overflow: hidden; 
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+                /* GRID LAYOUT FOR FOOD ITEMS */
+    .food-columns {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+                /* STYLING FOOD IMAGES */
+
+    #food-pictures {
+        width: 120px;
+        image-rendering: pixelated; 
+        border: 3px solid #ff6699; 
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #fff;
+        box-shadow: 4px 4px 0px #ff99aa;
+        
+    }
+    #food-pictures:hover {
+        transform: scale(1.2);
+    }
+               /* STYLING FOR PRICE  */
+    #price {
+        font-style: italic;
+        color: #ff3366;
+    }
+    #order-section {
+        text-align: center; 
+        font-size: 14px;  
+    }
+
+
+    #order-instructions-1,
+    #order-instructions-2,
+    #order-instructions-3 {
+        font-weight: bold; 
+        background-color: #ff99aa; 
+        padding: 4px;  
+        border: 3px solid #ff6699; 
+        display: inline-block; 
+        box-shadow: 4px 4px 0px #ff3366; 
+    }
+
+    #submit-input-button {
+        background-color: #ff6699; 
+        border: 3px solid #ff3366; 
+        padding: 15px 30px; 
+        font-size: 14px; 
+        font-family: 'Press Start 2P', cursive; 
+        color: white; 
+        cursor: pointer; 
+        box-shadow: 4px 4px 0px #ff3366; 
+        transition: transform 0.1s ease-in-out; 
+    }
+            /* BUTTON HOVER EFFECT */
+    #submit-input-button:hover {
+        transform: scale(1.05); 
+        background-color: #ff3366; 
+    }
+            /* STYLING HEADERS */
+    h1, h2, h3 {
+        text-shadow: 3px 3px 0px #ff99aa; 
+    }
+        /* MAKE SPECIAL REQUESTS TEXTBOX BIGGER */
+    #special-requests {
+    margin-top: 35px;
+    width: 60%;  
+    max-width: 400px; 
+    min-height: 50px;
+    height: 50px; 
+    padding: 10px;  
+    font-size: 16px; 
+    resize: vertical; /* Allows users to resize it up/down */
+}
+
+ </style>
+
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>Welcome to CodeCafe</h1>
+        <nav class="links">
+            <ul>
+                <li><a href= "#menu-section">Menu</a></li>
+                <li><a href= "#order-section">Order Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br/><hr><br/>
+    <!-- MAIN SECTION -->
+     <br>
+        <section id="menu-section">
+            <h2>Menu</h2>
+            <div class="food-columns">
+                <!-- CHEESECAKE -->
+                 <img id="food-pictures" img style="width: 150px;" alt="Cheesecake"
+                 src="images/sr2d538c00400aws3.png" />
+                 <h3>Cheesecake</h3>
+                 <p>Get it with 3 strawberries if you say please :0
+                 <br/>
+                 <b>Price:</b> <span id="price">$12.00</span>
+                 </p>
+                 <!-- COFFEE -->
+                 <img id="food-pictures" img style="width: 150px;" alt="Coffee"
+                 src="images/vecteezy_vector-illustration-of-pixel-coffe-cup-icon_6484738.jpg" />
+                 <h3>Coffee</h3>
+                 <p>Tip me for hot coffee ;)
+                 <br/>
+                 <b>Price:</b> <span id="price">$6.00</span>
+                 </p>
+                 <!-- GELATO -->
+                 <img id="food-pictures" img style="width: 150px;" alt="Gelato" 
+                 src="images/vecteezy_pixelated-gelato-ice-cream-sundae-gelato-ice-cream-icon_52614843.jpg"/>
+                 <h3>Gelato</h3>
+                 <p>Gusta un fresco e dolce gelato italiano
+                 <br/>
+                 <b>Price:</b> <span id="price">$8.00</span>
+                 </p>
+            </div>
+        </section>
+        <br/><hr/><br/>
+        <!-- PLACE ORDER SECTION -->
+         <section id="order-section">
+            <form>
+                <h2>Place Order Here</h2>
+                <!-- NUMBER INPUTS FOR EACH MENU ITEM -->
+                 <label id="order-instructions-1">1. Select a menu item:</label><br/>
+                 Cheesecake <input type="number" id="Cheesecake" min="1" max="5"/><br>
+                 Coffee <input type="number" id="Coffee" min="1" max="5"/><br>
+                 Gelato <input type="number" id="Gelato" min="1" max="5"/><br/><br/>
+                 <!-- RADIO BUTTONS FOR ADD-ONS -->
+                 <label id="order-instructions-2">2. Would you like any add-ons?</label><br/>
+                 <input type="checkbox" id="chocolate-sauce"/>Chocolate Sauce<br/>
+                 <input type="checkbox" id="sourdough-toast"/>Sourdough Toast<br/>
+                 <input type="checkbox" id="exotic-fruit-bowl"/>Exotic Fruit Bowl<br/><br/>
+                 <!-- TEXTAREA FOR SPECIAL REQUESTS -->
+                 <label for="special-requests" id="order-instructions-3">3. Any Special Requests? (allergies etc.)</label><br/>
+
+                 <textarea id="special-requests" maxlength="200" placeholder="Type Special Request Here..."></textarea>
+                 <!-- SUBMIT BUTTON -->
+                  <br/><br>
+                  <input id="submit-input-button" type="submit" value="Go To Checkout"/>
+            
+            </form>
+         </section>
+     </main>
+     <br/><hr/><b/>
+     <!-- FOOTER SECTION-->
+      <footer>
+        <p>Made with love by @Isabellaardon</p>
+      </footer>
+</body>
+</html>
+
+
+<!-- used @oliviakamau for inspiration on how to write the code & chatgpt for css ideas-->
